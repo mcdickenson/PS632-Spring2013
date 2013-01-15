@@ -32,3 +32,5 @@ What if we want to add two of our new binary numbers? Well, they aren't really n
 Now for some more string play. Let's write a function to turn ints into Roman numerals (`roman_numify`) and back. (Consider also doing this with regular expressions - http://www.diveintopython.net/regular_expressions/n_m_syntax.html.)
 
 Testing: come up with some tests that my functions *don't* pass. Then, make them pass those tests. 
+
+In the test code for `base_to_int`, make sure they know why it would be wrong to just check it against `int_to_base`. 

@@ -4,7 +4,11 @@ import lab1
 class TestLab1Code(unittest.TestCase):
 
 	def setUp(self): 
-		return
+		self.x2 = "10000"
+		self.y2 = "10"
+		self.y10 = "2"
+		self.xplusy = "10010"
+		self.xtimesy = "100000"
 
 	# Correctness tests 
 
@@ -54,6 +58,20 @@ class TestLab1Code(unittest.TestCase):
 
 	def test_base_to_int_negative(self):
 		self.assertEqual(lab1.base_to_int("-10000", 2), -16)
+
+
+	# flexibase methods
+	def test_flexibase_add_base_2(self):
+		self.assertEqual(lab1.flexibase_add(self.x2, self.y2, 2, 2), self.xplusy)
+
+	def test_flexibase_add_base_2_10(self):
+		self.assertEqual(lab1.flexibase_add(self.x2, self.y10, 2, 10), self.xplusy)
+
+	def test_flexibase_multiply_base_2(self):
+		self.assertEqual(lab1.flexibase_multiply(self.x2, self.y2, 2, 2), self.xtimesy)
+
+	def test_flexibase_multiply_base_10(self):
+		self.assertEqual(lab1.flexibase_multiply(self.x2, self.y10, 2, 10), self.xtimesy)
 
 
 	# romanify 

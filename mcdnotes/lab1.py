@@ -30,6 +30,20 @@ def base_to_int(string, base):
   if string[0]=="-" : result *= -1 
   return result 
 
+def flexibase_add(str1, str2, base1, base2):
+  num1 = base_to_int(str1, base1)
+  num2 = base_to_int(str2, base2)
+  tmp = num1 + num2 
+  result = int_to_base(tmp, base1)
+  return result 
+
+def flexibase_multiply(str1, str2, base1, base2):
+  num1 = base_to_int(str1, base1)
+  num2 = base_to_int(str2, base2)
+  tmp = num1 * num2 
+  result = int_to_base(tmp, base1)
+  return result 
+
 def romanify(num):
   if not 0 < num< 4000:
     return "out of range"
