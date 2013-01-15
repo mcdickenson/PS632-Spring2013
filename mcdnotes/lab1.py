@@ -19,6 +19,17 @@ def int_to_base(num, base):
   digits.reverse()
   return ''.join(digits)
 
+def base_to_int(string, base):
+  if string=="0" or base <= 0 : return 0 
+  elif string[0]=="-" : rev = (string[1:])[::-1]
+  else: rev = string[::-1]
+  result = 0 
+  for i in range(len(rev)):
+    num = int(rev[i])
+    result += num * base ** i  
+  if string[0]=="-" : result *= -1 
+  return result 
+
 def romanify(num):
   if not 0 < num< 4000:
     return "out of range"
@@ -30,4 +41,8 @@ def romanify(num):
     result += nums[i] * count 
     num -= ints[i] * count 
   return result
+
+# def deromanify(string):
+#   # TODO: go over this once they know dicts
+
 

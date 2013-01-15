@@ -8,6 +8,7 @@ class TestLab1Code(unittest.TestCase):
 
 	# Correctness tests 
 
+	# binarify
 	def test_binarify_16(self):
 		self.assertEqual(lab1.binarify(16), "10000")
 
@@ -21,6 +22,7 @@ class TestLab1Code(unittest.TestCase):
 		self.assertEqual(lab1.binarify(-16), "0")
 
 
+	# int_to_base
 	def test_int_to_base_2(self):
 		self.assertEqual(lab1.int_to_base(123, 2), lab1.binarify(123))
 
@@ -37,6 +39,24 @@ class TestLab1Code(unittest.TestCase):
 		self.assertEqual(lab1.int_to_base(-16, 2), "-10000")
 
 
+	# base_to_int
+	def test_base_to_int_16(self):
+		self.assertEqual(lab1.base_to_int("10000", 2), 16)
+
+	def test_base_to_int_3(self):
+		self.assertEqual(lab1.base_to_int("110", 3), 12)
+
+	def test_base_to_int_10(self):
+		self.assertEqual(lab1.base_to_int("16", 10), 16)
+
+	def test_base_to_int_0(self):
+		self.assertEqual(lab1.base_to_int("123", 0), 0)
+
+	def test_base_to_int_negative(self):
+		self.assertEqual(lab1.base_to_int("-10000", 2), -16)
+
+
+	# romanify 
 	def test_romanify_3(self):
 		self.assertEqual(lab1.romanify(3), "III")
 
