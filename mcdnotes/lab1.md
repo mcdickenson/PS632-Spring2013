@@ -31,4 +31,4 @@ What if we want to add two of our new binary numbers? Well, they aren't really n
 
 Now for some more string play. Let's write a function to turn ints into Roman numerals (`roman_numify`) and back. (Consider also doing this with regular expressions - http://www.diveintopython.net/regular_expressions/n_m_syntax.html.)
 
-Be sure to write test code for all of this! 
+Testing: come up with some tests that my functions *don't* pass. Then, make them pass those tests. 
